@@ -19,7 +19,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        initialRouteName='Home'
+        initialRouteName='Ana Sayfa'
         drawerContent={(props) => <CustomDrawerContent {...props} />}
         screenOptions={{
           header: () => <Header />
