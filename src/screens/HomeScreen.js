@@ -39,21 +39,19 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10
+    borderRadius: 0
   },
   post: {
-    marginBottom: 20
+    marginBottom: 5
   },
   image: {
     width: "100%",
     height: 200,
-    borderRadius: 10,
     justifyContent: "flex-end"
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    borderRadius: 10
+    backgroundColor: "rgba(0,0,0,0.5)"
   },
   textContainer: {
     padding: 10,
