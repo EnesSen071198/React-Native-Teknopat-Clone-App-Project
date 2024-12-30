@@ -4,18 +4,21 @@ import {
   Text,
   ImageBackground,
   FlatList,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity
 } from "react-native";
 import data from "../data/Data.json"; // Dosyayı içe aktar
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <FlatList
         data={data}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <View style={styles.post}>
+          <TouchableOpacity
+            style={styles.post}
+            onPress={() => navigation.navigate("Detail", item)}>
             <ImageBackground
               source={{ uri: item.image }}
               style={styles.image}
@@ -27,7 +30,7 @@ const HomeScreen = () => {
                 <Text style={styles.readTime}>{item.readTime}</Text>
               </View>
             </ImageBackground>
-          </View>
+          </TouchableOpacity>
         )}
         scrollEnabled={true}
         style={{ flex: 1 }}
